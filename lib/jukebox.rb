@@ -16,7 +16,7 @@ end
 
 def play(songs)
     puts "Please enter a song name or number:"
-    input = gets.split
+    input = gets.chomp
     hash = {}
     songs.each.with_index(1) do |song, num|
         hash.merge!("#{num}" => "#{song}")
