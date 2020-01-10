@@ -18,15 +18,15 @@ def play(songs)
     puts "Please enter a song name or number:"
     input = gets.chomp
     h = {}
-    songs.each.with_index(1) do |song, num|
-      h.merge!("#{num}" => "#{song}")
+    songs.each.with_index(1) do |song, i|
+      h.merge!("#{i}" => "#{song}")
     end
-    h.find { |num, song|
-        puts "Playing " + song if input == num || input == song
+    h.find { |i, song|
+        puts "Playing " + song if input == i || input == song
     }
-    if h.any? { |num, song| input == num || input == song } == false
+    if h.any? { |i, song| input == i || input == song } == false
         puts "Invalid input, please try again"
-  end
+    end
 end
 
 def exit_jukebox
