@@ -18,11 +18,11 @@ def play(songs)
     puts "Please enter a song name or number:"
     user = gets.chomp
     h = {}
-        songs.each.with_index(1) do |song, num|
-           hash.merge!("#{num}" => "#{song}")
-        end
-    h.find { |k, v| puts v if inp == k || inp == v }
-    if h.any? { |k, v| inp == k || inp == v } == false
+    songs.each.with_index(1) do |song, num|
+      hash.merge!("#{num}" => "#{song}")
+    end
+    h.find { |k, v| puts "#{v}" if user == k || user == v }
+    if h.any? { |k, v| user == k || user == v } == false
         puts "Invalid input, please try again"
     end
 end
