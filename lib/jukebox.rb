@@ -32,7 +32,7 @@ def exit_jukebox
   puts "Goodbye"
 end
 
-# def run(songs)
-#   puts "Please enter a command:"
-#   usr = gets.strip
-# end
+def run(songs)
+  puts "Please enter a command:"
+  usr = gets.strip
+end
