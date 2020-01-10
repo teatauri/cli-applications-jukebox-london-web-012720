@@ -16,7 +16,7 @@ end
 
 def play(songs)
     puts "Please enter a song name or number:"
-    usr = gets.chomp
+    usr = gets.strip
     h = {}
     songs.each.with_index(1) do |song, i|
       h.merge!("#{i}" => "#{song}")
@@ -33,5 +33,6 @@ def exit_jukebox
 end
 
 def run(songs)
-  play(songs)
+  puts "Please enter a command:"
+  usr = gets.strip
 end
