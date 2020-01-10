@@ -16,15 +16,14 @@ end
 
 def play(songs)
     puts "Please enter a song name or number:"
-    input = gets.chomp
+    usr = gets.chomp
     h = {}
     songs.each.with_index(1) do |song, i|
       h.merge!("#{i}" => "#{song}")
     end
     h.find { |i, song|
-        puts "Playing " + song if input == i || input == song
-    }
-    if h.any? { |i, song| input == i || input == song } == false
+        puts "Playing " + song if usr == i || usr == song }
+    if h.any? { |i, song| usr == i || usr == song } == false
         puts "Invalid input, please try again"
     end
 end
