@@ -18,8 +18,8 @@ def play(songs)
     puts "Please enter a song name or number:"
     user = gets.chomp
     h = {}
-    songs.each.with_index(1) do |song, num|
-      hash.merge!("#{num}" => "#{song}")
+    songs.each.with_index(1) do |song, i|
+      hash.merge!("#{i}" => "#{song}")
     end
     h.find { |k, v| puts "#{v}" if user == k || user == v }
     if h.any? { |k, v| user == k || user == v } == false
