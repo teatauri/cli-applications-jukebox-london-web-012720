@@ -35,4 +35,17 @@ end
 def run(songs)
   puts "Please enter a command:"
   usr = gets.strip
+  unless usr == "exit" do 
+    if usr == "list"
+      list(songs)
+    elsif usr == "play"
+      play(songs)
+    elsif usr == "help"
+      help 
+    end 
+    puts "Please enter a command:"
+    usr = gets.strip
+  end
+  
+    
 end
