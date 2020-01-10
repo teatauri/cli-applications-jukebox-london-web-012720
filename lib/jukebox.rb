@@ -35,7 +35,7 @@ end
 def run(songs)
   puts "Please enter a command:"
   usr = gets.strip
-  unless usr == "exit" do 
+  while usr != "exit" do 
     if usr == "list"
       list(songs)
     elsif usr == "play"
@@ -46,7 +46,7 @@ def run(songs)
     puts "Please enter a command:"
     usr = gets.strip
     if usr == "exit"
-      exit 
+      exit_jukebox 
     end
   end
 end
