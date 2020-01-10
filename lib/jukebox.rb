@@ -17,13 +17,12 @@ end
 def play(songs)
     puts "Please enter a song name or number:"
     user = gets.chomp
-    data = {}
+    inp = {}
     songs.each.with_index(1) do |song, num|
         hash.merge!("#{num}" => "#{song}")
     end
-    
-    data.find { |num,song| puts "#{song}" if user == num || user == song }
-    if data.any? { |num,song| input == num || input == song } == false
+    data.find { |num,song| puts "#{song}" if inp == num || inp == song }
+    if data.any? { |num,song| inp == num || input == song } == false
           puts "Invalid input, please try again"
     end
 end
